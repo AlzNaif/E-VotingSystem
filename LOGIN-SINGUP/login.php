@@ -1,4 +1,4 @@
-﻿<?php
+<?php
  
 $hostname='localhost';
 $user = 'root';
@@ -84,7 +84,7 @@ else if (mysql_num_rows($queryV) != 0){
             <input type="password" placeholder="Password" name="password" required autocomplete="off"/>
           </div>
           <p class="Sign-up">
-		  <a href="voter sign-up.php">Sign-up</a>		  </p>
+		  <a href="voter sign-up.php">Sign-Up</a>		  </p>
           <p class="forget password">
 		  <a href="../forget/forget page.php">forget password?</a>		  </p>
           <button name="login" class="button button-block"/>Login</button>
