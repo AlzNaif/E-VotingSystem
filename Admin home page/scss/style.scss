@@ -1,0 +1,78 @@
+$blue: #259BB6;
+$green: #9BBF40;
+$purple: #915B9F;
+
+@mixin light-button($accent) {
+  border: 2px solid $accent;
+  color: $accent;
+  
+  &:before {
+    opacity: 0;
+    background-color: $accent;
+  }
+  
+  &:hover { color: black; }
+}
+
+@mixin dark-button($accent) {
+  border: 2px solid $accent;
+  color: white;
+  
+  &:before { background-color: $accent; }
+  &:hover { color: $accent; }
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+  #container {
+    width: 700px;
+    margin: 15% auto;
+    text-align: center;
+  }
+  
+  button, .button {
+    width: 33.3%;
+    height: 48px;
+    position: relative;
+    margin: 18px;
+    overflow: hidden;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: -1;
+    }
+    
+    &:focus { outline: none; }
+        
+    &#btn-3 {
+       @include dark-button($green);
+      transition: color 0.3s linear 0,1s;
+      
+      &:before { transition: opacity 0.4s linear; }
+      &:hover:before { opacity: 0; }
+    }
+    
+    &#btn-4 {
+      @include dark-button($green);
+      transition: color 0.3s linear 0,1s;
+      
+      &:before { transition: opacity 0.4s linear; }
+      &:hover:before { opacity: 0; }
+    }
+    
+    
+    
+   
+  }
+}

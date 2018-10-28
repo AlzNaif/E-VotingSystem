@@ -1,0 +1,43 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+  html { 
+  background: url(css/b.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  background: url(b.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html #container, body #container {
+  width: 700px;
+  margin: 15% auto;
+  text-align: center;
+}
+html button, html .button, body button, body .button {
+  width: 33.3%;
+  height: 48px;
+  position: relative;
+  margin: 18px;
+  overflow: hidden;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+html button:before, html .button:before, body button:before, body .button:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
